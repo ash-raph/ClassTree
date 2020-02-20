@@ -5,7 +5,8 @@ def get_tree(cl, depth=0, kind='SUB'):
     }
     
     if depth:
-        print(' ' * 3 * depth, '|-->', sep='', end='')
+        print(' ' * 3 * depth, '|', sep='')
+        print(' ' * 3 * depth, '+-->', sep='', end='')
     
     print(f'{cl.__name__}')
     res = getattr(cl, mapper[kind])
